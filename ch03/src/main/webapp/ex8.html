@@ -12,25 +12,25 @@ body {
 
 
 ul.bullet {
+	position: absolute;
+	z-index:101;
+	left: 100px;
+	top: 200px; 
 	list-style-type:none;
 	margin:10px 0 0 0;
 	padding:0;
 	border:1px solid #999;
 	border-radius:10px;
-	width:300px;
 	
-	background:url('/wp_ch3/images/back2.gif') 0 bottom no-repeat
+	background:url('/ch03/images/back2.gif') 0 bottom no-repeat
 }
 
 ul.bullet li {
-	width:250px;
-	height:40px;
+	width:280px;
+	height:20px;
 	margin:10px 0 0 0;
 	padding:0 0 0 30px;
-	background-image: url(images/bullet1.gif);
-	background-repeat: no-repeat;
-	background-position: 10px top;	
-	
+	background: url(images/bullet1.gif) 10px top no-repeat;
 }
 
 </style>
@@ -45,7 +45,7 @@ ul.bullet li {
     <li> 5. 리스트의 bullet 을 백그라운드로 사용가능합니다.</li>
     <li> 6. 리스트의 bullet 을 백그라운드로 사용가능합니다.</li>
 </ul>
-
+<div style="z-index:100; position: absolute; left: 200px; width: 200px; height: 500px; background-color: blue;"></div>
 
 </body>
 </html>
