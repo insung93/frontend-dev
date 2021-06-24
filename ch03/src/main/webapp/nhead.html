@@ -4,72 +4,77 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-* { padding: 0; margin: 0; }
-.header {
-	width: 630px;
-	height: 100px;
-	margin: 50px auto;
-}
-.header .logo, .header .search-box { float: left; }
+* { padding:0; margin: 0 }
+.header { width:630px; height:100px; margin:50px auto;  vertical-align: middle; }
+.header .logo, .header .search-box { float: left;}
 
 .header .logo {
-	width: 222px;
-	height: 52px;
-	font-size: 0; 
-	overflow: hidden;
-	
-	background: url('/ch03/images/naver.png') no-repeat 0 -158px;
-	background-size: 440px 408px; 
-}
-.header .search-box {
-	width: 400px;
-	height: 50px
-}
-.header .search-box input,
-.header .search-box a		{display: block}
-
-.header .search-box *	 { float: right }
-
-.search-box .btn-search {
-	width: 45px;
-	height: 45px;
-	background-color: #19ce60; 
-}
-
-.search-box .btn-search button {
 	font-size: 0;
 	text-indent: 110%;
-	width: 30px;
-	height: 30px;
-	display: block;
-	background-color: green;
-	
+	overflow: hidden;
+	width:222px;
+	height:52px;
+	background: url('/ch03/images/naver.png') no-repeat 0 -158px;
+	background-size: 440px 408px;
 }
 
-.header .search-box { 
-	border: 2px solid #19ce60;
+.search-box { width:400px; height:50px; }
+.search-box input,
+.search-box a 		{ display:block }
+
+.search-box a, .search-box input, .search-box .btn-search { float:right}
+
+.search-box .btn-search {
+	width: 46px;
+	height: 46px;
+	background-color: #19CE60;
 }
-.header .search-box input { 
-	float: left;
-	width: 220px;
-	padding: 13px 5px;
-	font-size: 16px;
-	font-weight: bold;
-	outline: none;
-	border: 0px; 
+.search-box .btn-search button {
+	font-size:0;
+	text-indent: 110%;
+	border: none;
+	width: 30px;
+	height:30px;
+	display:block;
+	background: url("/ch03/images/naver.png") no-repeat 0 -386px;
+	background-size: 440px 408px;
+	margin: 10px;
 }
+.drop-down {
+	font-size:0;
+	text-indent: 110%;
+	width: 10px;
+	height: 5px;
+	background: url("/ch03/images/naver.png") no-repeat -170px -151px;
+	background-size: 440px 408px;
+	margin-top: 20px;
+	margin-right: 5px;
+}
+.keyboard {
+	font-size:0;
+	text-indent: 110%;
+	width: 20px;
+	height: 12px;
+	background: url("/ch03/images/naver.png") no-repeat -420px -267px;
+	background-size: 440px 408px;
+	margin-top: 17px;
+	margin-right: 5px;
+}
+.search-box { margin-left: 20px; border:3px solid #19CE60; width:380px; height:45px }
+.search-box input { float: left; width:240px; padding:13px 5px; border: none; font-size:16px; font-weight: bold; outline: none; }
+
 </style>
 </head>
 <body>
 	<div class="header">
 		<h1 class="logo">네이버</h1>
-		<div class="search-box">
+		<div class="search-box">	
 			<div class="btn-search">
 				<button>돋보기</button>
 			</div>
-			<a href="">드롭다운</a>
-			<a href="">키보드</a>
-			<input type="text">
+			<a href="#" class="drop-down">드롭다운</a>
+			<a href="#" class="keyboard">키보드</a>
+			<input type="text" />
 		</div>
 	</div>
 </body>
