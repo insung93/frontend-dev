@@ -83,3 +83,4 @@ console.log("===================");
 var str = "5";
 console.log(parseInt(str) == 5);
 
+   
