@@ -1,10 +1,12 @@
 /*
 변수와 데이터 타입
+
 [기본타입(primitive type), 유사객체]
 1. number
 2. boolean
 3. string
 4. undefined
+
 [객체1] - object type 
 1. new 생성자함수() 사용해서 생성,
     Number()  -> object type 객체 생성
