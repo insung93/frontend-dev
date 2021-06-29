@@ -18,4 +18,34 @@ Stagement
 변수와 상수
 - 변수 : let
 - 상수 : const 
-- 유효범위(scope) 블록 스코프 (  {}  )
+- 유효범위(scope) 블록 스코프 (  {  }  )
+
+var의 유효 범위
+- 함수 스코프
+- 함수에서만 함수에서만 구분 되기 때문에 블록 스코프를 무시
+- Hoisting : 아래에 있는 선언을 끌어올리다.
+```javascript```
+function dooly() {
+    console.log("dooly");
+}
+dooly();
+micol();
+function micol() {
+    console.log("micol");
+}
+
+
+```javascript```
+name = "dooly1";
+name+="dooly2";
+console.log(name);
+var name;
+
+
+```javascript```
+//var name;
+console.log(name);
+name = "dooly2";
+console.log(name);
+var name = "dooly1";
+console.log(name);
