@@ -15,7 +15,7 @@ var url4 = encodeURIComponent(url); // 안 좋은 사용예
 console.log(url4);
 
 // 만들어야 할 URL
-// http://mysite.com/user?no=10&name=안대혁&email=kickscar@gmail.com
+// http://mysite.com/user?no=10&name=둘리&email=dooly@gmail.com
 //
 var toQueryString = function(o) {
     var qs = [];
@@ -28,8 +28,8 @@ var toQueryString = function(o) {
 var url = "http://mysite.com/user";
 var param = {
     no: 10,
-    name: '안대혁',
-    email: 'kickscar@gmail.com'    
+    name: '둘리',
+    email: 'dooly@gmail.com'    
 }
 
 var url5 = url + "?" + toQueryString(param);
