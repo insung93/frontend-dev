@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+console.log(location.href);
+</script>
+</head>
+<body>
+	<h1>BOM(Browser Object Model)</h1>
+	<h2>3. location 객체(주소창)</h2>
+	
+	<h3>Refresh Page 하는 방법</h3>
+	<!-- 방법 1 --> 
+	<button onclick="location = location;">referesh01</button>
+	<!-- 방법 2 -->
+	<button onclick="location.href = location.href;">referesh02</button>
+	<!-- 방법 3 -->
+	<button onclick="location.assign('');">referesh03</button>
+	<!-- 방법 4 -->
+	<button onclick="location.replace(location);">referesh04</button>
+	<!-- 방법 5 ctrl + F5 --> 
+	<button onclick="location.reload();">referesh05</button> 
+	
+	<h3>Redirect</h3>
+	<button onclick="location.href = 'http://www.douzone.com';">redirect01</button>
+</body>
+</html>

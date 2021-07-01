@@ -11,11 +11,25 @@ console.log(s);
 
 // 팝업창
 setTimeout(function(){
-	var popup = window.open("popup.html", "popup", "width=600, height=400");
+	let popup = window.open("popup.html", "popup", "width=600, height=400");
+	/* let popup = window.open("http://www.douzone.com", "popup", "width=600, height=400"); */
 	setTimeout(function() {
 		// pop 문서의 내용 바꾸기
+		// 보안 문제(Cross-Domain) 때문에 같은 도메인에서만 가능
 		popup.document.write("<h1>POPUP TEXT CHANGE : DOM CHANGE</h1>");
 	},2000);
+	setTimeout(function() {
+		// 자식창의 위치 이동
+		popup.moveTo(200,200);
+	},4000);
+	setTimeout(function() {
+		// 자식창의 위치 이동
+		popup.moveTo(400,400);
+	},6000);
+	setTimeout(function() {
+		popup.message();
+	},8000);
+	console.log("1st timeout handler---end")
 }, 2000);
  
  
