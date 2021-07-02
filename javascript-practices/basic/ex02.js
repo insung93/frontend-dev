@@ -72,14 +72,14 @@ console.log("o2 :" + typeof(o2));
 
 console.log("====[객체2]: function type =====================")
 
-var f = new Function("a","b","return a + b ;");
-var f2 = function(a,b) {return a+b;};
+var f = new Function("a", "b", "return a + b;");
+var f2 = function(a, b) { return a + b; };
 console.log("f :" + typeof(f));
 console.log("f2 :" + typeof(f2));
 
-console.log("====원시타입과 원시타입을 Wrapper 객체는 구분없이 사용 가능========")
-console.log(i+i2);
-console.log(s+s2);
+console.log("====원시타입과 원시타입 Wrapper 객체는 구분없이 사용 가능========")
+console.log(i + i2);
+console.log(s + s2);
 
 //원시 타입에 메서드가 호출될 때,
 //임시 Wrapper 객체가 만들어져서 메서드 호출이 일어난 뒤 사라진다.

@@ -45,7 +45,7 @@ var sum = function(){
     // 구현2 (Array.prototype.forEach + caller 바꾸기)
     Array.prototype.forEach.call(arguments, function(e){
         s += e;
-    })
+    });
 
     return s;
 }

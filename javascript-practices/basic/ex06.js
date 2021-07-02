@@ -19,7 +19,7 @@ o1.another = new Object();
 o1.another.name = "마이콜";
 o1.another.age = 30;
 
-console.log(o1);
+console.log("o1 : ", o1);
 
 // 생성 방법2
 // {} listeral 사용하는 방법
@@ -30,7 +30,7 @@ o2.another = new Object();
 o2.another.name = "마이콜";
 o2.another.age = 30;
 
-console.log(o2);
+console.log("o2 : ", o2);
 
 
 
@@ -44,7 +44,7 @@ o3 = {
     }
 };
 
-console.log(o3);
+console.log("o3 : ", o3);
 
 /* XmlHttpRequest 호스트 객체(부라우저)사용해서 통신(AJAX)을 한다.*/
 var reponse = '{name: "둘리", age: 10, email: "dooly@gmail.com"}';

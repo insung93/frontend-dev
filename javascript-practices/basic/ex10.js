@@ -17,7 +17,8 @@ console.log(a2.length);
 a2[11] = 11;
 a2[12] = 12;
 console.log(a2[0], a2[1], a2.length) // 배열 요소에 값을 지정하지 않으면 undefined;
-
+a2[5] = 5;
+console.log(a2);
 
 
 // 초기값을 지정할 수 있다.

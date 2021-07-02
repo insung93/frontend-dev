@@ -27,7 +27,6 @@ console.log(numbers);
 var n = numbers.shift();
 console.log(n, numbers);
 
-
 // Array 메서드 - slice
 var numbers2 = numbers.slice(1, 3);
 console.log(numbers2, numbers);
@@ -43,23 +42,21 @@ console.log(fruits);
 var fruits2 = fruits.splice(0 /* index */, 2 /* count */ );
 console.log(fruits2, fruits);
 
-var a1 = [0,1,2,3,4];
-var a2 = a1.splice(1,3,10);
-console.log(a2,a1);
+var a1 = [0, 1, 2, 3, 4];
+var a2 = a1.splice(1, 3, 10);
+console.log(a2, a1);
 
 // 치환
-var a1 = [0,1,2,3,4];
-var a2 = a1.splice(1,1,10);
-console.log(a2,a1);
+var a1 = [0, 1, 2, 3, 4];
+var a2 = a1.splice(1, 1, 10);
+console.log(a2, a1);
 
 // 추가
-var a1 = [0,1,2,3,4];
-var a2 = a1.splice(1,0,10);
-console.log(a2,a1);
+var a1 = [0, 1, 2, 3, 4];
+var a2 = a1.splice(1, 0, 10);
+console.log(a2, a1);
 
-
-
-
-
-
-
+// 삭제
+var a1 = [0, 1, 2, 3, 4];
+var a2 = a1.splice(1, 1);
+console.log(a2, a1);

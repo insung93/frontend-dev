@@ -30,6 +30,8 @@ f.another = {
         console.log(this.name + ":" + this.age);
     }
 };
+f();
+console.log(f);
 console.log(f.another);
 f.another.info();
 

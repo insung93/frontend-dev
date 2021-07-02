@@ -27,7 +27,7 @@ var index = str7.indexOf("string2");
 console.log(index)
 
 var index = str7.indexOf("string4");
-console.log(index);
+console.log(index); // -1 찾는 문자열 없을 경우 
 
 var str8 = str7.substr(10); //10ths ~ end
 console.log(str8);
@@ -35,7 +35,7 @@ console.log(str8);
 var str9 = str7.substr(10, 3 /* count */);
 console.log(str9);
 
-var str10 = str7.substr(10, 13 /* last Index - 1 */);
+var str10 = str7.substr(10, 14 /* last Index - 1 */);
 console.log(str10);
 
 var a = str7.split(" ");

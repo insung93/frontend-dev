@@ -1,5 +1,5 @@
 // 변수의 범위(scope)
-// 1. 자바스크립트는 어휘에서 범위를  알 수 있는 정적 범위(Lexical Scope)이다.
+// 1. 자바스크립트는 어휘에서 범위를 알 수 있는 정적 범위(Lexical Scope)이다.
 // 2. EC6 이전에는 자바스크립트에는 자바와 같은 Block Scope은 지원하지 않았다.
 //    EC6 이전에는 함수 범위(Function Scope)만 지원 했었다.
 //    function의 {} 안에서 변수 안에 var 키워드를 하면 함수 범위를 가지게 된다.
@@ -20,13 +20,12 @@ var f = function() {
 {
     let x = 100;
     const PI = 3.14
-    x= 100;
+    x = 100;
     // PI=0;
     // Assignment to constant variable
 }
 // console.log(x);
 // x is not defined
-// block 는 객체 리터럴 이기때문에 var 은 사용 안됨
 
 f();
 console.log(i);

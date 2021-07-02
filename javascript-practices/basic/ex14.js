@@ -16,11 +16,12 @@ console.log(url4);
 
 // 만들어야 할 URL
 // http://mysite.com/user?no=10&name=둘리&email=dooly@gmail.com
-//
+
 var toQueryString = function(o) {
     var qs = [];
     for(prop in o) {
         qs.push(prop + "=" + encodeURIComponent(o[prop]));
+        console.log(qs);
     }
     return qs.join("&");
 }
