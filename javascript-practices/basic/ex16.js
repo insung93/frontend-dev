@@ -48,6 +48,7 @@ var sum = function(){
     });
 
     return s;
+    
 }
 
 console.log(sum(1, 2));
