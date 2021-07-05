@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>sample1</title>
+	<link rel="stylesheet" href="image-viewer.css" type="text/css">
+	<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+	<script>
+		/* jQuery Plugin */
+		$.fn.hello = function() {
+			console.log("hello");
+			console.log(this);
+			console.log(this.length);
+			console.log(this.attr("title"));
+			return this;
+		};
+		$.fn.flash= function() {
+			var $that = $(this);
+			var isBlink = false;
+			setInterval(function() {
+				$that.css("backgroundColor",(isBlink ? "#f00" : "#EFEFEF"));
+				isBlink = !isBlink;
+			},1000);
+			return this;
+		};
+		$(function() {
+			$("#btn").click(function() {
+				$(this)
+					.flash()	
+					.hello();
+				//$("div").hello(); 모든 객체 접근가능 hello함수 
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>jQuery Plug-in</h1>
+	<div style="width: 200px; margin: 50px auto;" >
+		<button id="btn" title="click me"> click me ! </button>
+	</div>
+
+</body>
+</html>
