@@ -1,4 +1,6 @@
 console.log("===global===============");
+age = "15"
+console.log(age, global.age);
 global.name = "둘리";
 console.log(name, global.name);
 var email = "dooly@gmail.com";
