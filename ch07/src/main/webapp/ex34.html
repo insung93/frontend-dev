@@ -9,6 +9,19 @@
 	<script type="text/javascript" src="image-viewer.js"></script>
 	<script>
 		imageViewer.init();
+		/*
+			****slideshow 만들기
+			1. btn-slideshow  click event
+			2. event handeler
+				- 2초마다 그림이 바뀌게 하는 것
+					_intervalId = setInterval(function() {....},2000)
+					
+					clearInterval(_intervalId)
+					_intervalId = null;
+				- 버튼 텍스트 변경 '슬라이드쇼 시작' => '슬라이드쇼 중지'
+				- 다시 눌렀을 때 슬라이드쇼 중지
+				- 버튼 텍스트 변경 '슬라이드쇼 중지' => '슬라이드쇼 시작'
+		*/
 	</script>
 </head>
 
