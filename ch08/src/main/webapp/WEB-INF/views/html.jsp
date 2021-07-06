@@ -11,13 +11,13 @@
 <script type="text/javascript">
 	$(function() {
 		$("button").click(function() {
-			$("p").load("${pageContext.request.contextPath }/api/text");
+			$("p").load("${pageContext.request.contextPath }/api/html");
 		});
 	});
 </script>
 </head>
 <body>
-	<h1>AJAX - text format data</h1>
+	<h1>AJAX Test - HTML Format MEssage(Data)</h1>
 	<button>변경</button>
 	<p>변경전</p>
 </body>
