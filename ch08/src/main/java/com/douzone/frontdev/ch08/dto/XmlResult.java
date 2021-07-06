@@ -2,16 +2,16 @@ package com.douzone.frontdev.ch08.dto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="xmlresult")
+@XmlRootElement(name="response")
 public class XmlResult {
-	private String result;  /* "success" or "fail"  */
-	private Object data;    /* if success, data set */
-	private String message; /* if fail, message set */
+	private String result;  	/* "success" or "fail"  */
+	private GuestbookVo data;   /* if success, data set */
+	private String message; 	/* if fail, message set */
 	
 	private XmlResult() {
 	}
 
-	private XmlResult(Object data) {
+	private XmlResult(GuestbookVo data) {
 		result = "success";
 		this.data = data; 
 	}
@@ -21,7 +21,7 @@ public class XmlResult {
 		this.message = message; 
 	}
 
-	public static XmlResult success(Object data) {
+	public static XmlResult success(GuestbookVo data) {
 		return new XmlResult(data);
 	}
 
@@ -37,11 +37,11 @@ public class XmlResult {
 		this.result = result;
 	}
 
-	public Object getData() {
+	public GuestbookVo getData() {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(GuestbookVo data) {
 		this.data = data;
 	}
 
@@ -52,5 +52,43 @@ public class XmlResult {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
+	
+	@XmlRootElement(name="data")
+	public static class GuestbookVo {
+		private Long no;
+		private String name;
+		private String password;
+		private String regDate;
+		private String message;
+		public Long getNo() {
+			return no;
+		}
+		public void setNo(Long no) {
+			this.no = no;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		public String getRegDate() {
+			return regDate;
+		}
+		public void setRegDate(String regDate) {
+			this.regDate = regDate;
+		}
+		public String getMessage() {
+			return message;
+		}
+		public void setMessage(String message) {
+			this.message = message;
+		}
+	}	
 }
