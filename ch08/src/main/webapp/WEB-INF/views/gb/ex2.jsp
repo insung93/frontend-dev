@@ -1,13 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,36 +10,33 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="/ch08/jquery/jquery-3.6.0.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/ch08/ejs/ejs.js" type="text/javascript"></script>
 <script>
-/*
-var fetch = function(){
-	$.ajax({
-		url: "/ch08/guestbook/api/list",
-		dataType: "json",
-		type: "get",
-		success: function(response){
-			response.data.forEach(function(vo){
-				html =
-					"<li data-no='" + vo.no + "'>" + 
-						"<strong>" + vo.name + "</strong>" +
-						"<p>" + vo.message + "</p>" +
-						"<strong></strong>" + 
-						"<a href='' data-no='" + vo.no + "'>삭제</a>" + 
-					"</li>";
-				$("#list-guestbook").append(html);	
-			});
-		}
-	});	
+var render = function(vo, mode){
+	html =
+		"<li data-no='" + vo.no + "'>" + 
+			"<strong>" + vo.name + "</strong>" +
+			"<p>" + vo.message + "</p>" +
+			"<strong></strong>" + 
+			"<a href='' data-no='" + vo.no + "'>삭제</a>" + 
+		"</li>";
+	$("#list-guestbook")[mode ? "append" : "prepend"](html);
 }
-*/
-var messageBox = function(title, message) {
-	
-};
+
+var listItemEJS = new EJS({
+	url: "${pageContext.request.contextPath}/ejs/listitem-template.ejs"
+});
+
+
 $(function(){
 	$("#add-form").submit(function(event){
 		event.preventDefault();
 		
-		if($("#input-name").val() == "") {
+		vo = {}
+		
+		vo.name = $("#input-name").val();
+		// validation name
+		if(vo.name == "") {
 			// alert("이름이 비어 있습니다.");
 			$("#dialog-message").dialog({
 				modal: true,
@@ -57,8 +48,28 @@ $(function(){
 			});
 			return;
 		}
+
+		vo.password = $("#input-password").val();
+		// validation password
+
+		vo.message = $("#tx-content").val();
+		// validation message
 		
-		console.log("ajax");
+		// 데이터 등록
+		$.ajax({
+			url: "/ch08/guestbook/api/add",
+			dataType: "json",
+			type: "post",
+			contentType: "application/json",   
+			data: JSON.stringify(vo),
+			success: function(response){
+				//var vo = response.data;
+				//render(vo, false);
+				var html = listItemEJS.render(response.data);
+				$("#list-guestbook").prepend(html);
+			}
+		});		
+		
 	})
 });
 </script>
@@ -81,13 +92,13 @@ $(function(){
 				<p>
 					안녕하세요<br> 홈페이지가 개 굿 입니다.
 				</p> <strong></strong> <a href='' data-no=''>삭제</a></li>
-			<li data-no=''><strong>주인</strong> 
+			<li data-no=''><strong>주인</strong>
 				<p>
 					아작스 방명록 입니다.<br> 테스트~
 				</p> <strong></strong> <a href='' data-no=''>삭제</a></li>
 		</ul>
 	</div>
-	<div id="dialog-message" title="오류" style="display:none">
+	<div id="dialog-message" title="예제" style="display:none">
   		<p>안녕하세요~</p>
 	</div>	
 </body>
