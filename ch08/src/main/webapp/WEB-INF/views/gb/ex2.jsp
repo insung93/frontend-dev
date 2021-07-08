@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="/ch08/jquery/jquery-3.6.0.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="/ch08/ejs/ejs.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/ejs/ejs.js" type="text/javascript"></script>
 <script>
 var render = function(vo, mode){
 	html =
