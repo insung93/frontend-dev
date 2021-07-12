@@ -14,7 +14,7 @@
 <script>
 var fetch = function(){
 	$.ajax({
-		url: "/ch08/guestbook/api/list",
+		url: "${pageContext.request.contextPath}/guestbook/api/list",
 		dataType: "json",
 		type: "get",
 		success: function(response){
@@ -59,7 +59,7 @@ $(function(){
 				const no = $("#hidden-no").val();
 				const password = $("#password-delete").val();
 				$.ajax({
-					url: "/ch08/guestbook/api/delete/"+no,
+					url: "${pageContext.request.contextPath }/guestbook/api/delete/"+no,
 					dataType: "json",
 					type: "post",
 					data: "password=" + password,
