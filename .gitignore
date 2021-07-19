@@ -1,5 +1,10 @@
+**/node_modules
+
+**/.idea
+**/.iml
+**/build/
+
 **/.classpath
 **/.project
 **/.settings/
 **/target/
-**/build/
