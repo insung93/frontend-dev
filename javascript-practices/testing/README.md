@@ -102,7 +102,7 @@ $ npx mocha
 ```
 
 ## Assertion 기초
-[ex02.js]
+[test/ex02.js](test/ex02.js)
 ```javascript
 exports.add = (a, b) => a + b;
 exports.na = () => [2, 4, 6];
